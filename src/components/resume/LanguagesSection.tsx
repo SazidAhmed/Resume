@@ -10,7 +10,7 @@ export function LanguagesSection() {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-800">
+    <div className="glass-card p-6">
       <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-4 flex items-center gap-2">
         <Globe className="w-5 h-5 text-gray-400" />
         Languages
@@ -19,7 +19,7 @@ export function LanguagesSection() {
         {languages.map((lang) => (
           <div
             key={lang.name}
-            className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg px-3 py-2"
+            className="flex items-center gap-2 bg-white/50 dark:bg-white/5 border border-gray-200/50 dark:border-white/10 rounded-lg px-3 py-2 shadow-sm backdrop-blur-sm"
           >
             <span className="font-medium text-gray-900 dark:text-white">
               {lang.name}

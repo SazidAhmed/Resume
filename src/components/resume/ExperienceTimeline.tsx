@@ -23,7 +23,10 @@ export function ExperienceTimeline() {
               className="relative md:pl-16"
             >
               {/* Timeline dot */}
-              <div className="absolute left-4 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-950 hidden md:block" />
+              <div 
+                className="absolute left-4 w-4 h-4 rounded-full border-[3px] border-[var(--bg-base)] hidden md:block" 
+                style={{ background: 'var(--accent)', boxShadow: '0 0 10px var(--accent-glow)' }}
+              />
 
               <ExperienceCard experience={exp} />
             </motion.div>

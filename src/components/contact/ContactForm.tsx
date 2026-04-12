@@ -92,10 +92,10 @@ export function ContactForm() {
             type="text"
             {...register('name')}
             className={cn(
-              'w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors',
+              'w-full px-4 py-3 rounded-lg border bg-white/40 dark:bg-white/5 backdrop-blur-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all shadow-sm',
               errors.name
-                ? 'border-red-300 dark:border-red-700'
-                : 'border-gray-300 dark:border-gray-700'
+                ? 'border-red-300 dark:border-red-700/50'
+                : 'border-gray-200 dark:border-white/10'
             )}
             placeholder="Your name"
           />
@@ -114,10 +114,10 @@ export function ContactForm() {
             type="email"
             {...register('email')}
             className={cn(
-              'w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors',
+              'w-full px-4 py-3 rounded-lg border bg-white/40 dark:bg-white/5 backdrop-blur-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all shadow-sm',
               errors.email
-                ? 'border-red-300 dark:border-red-700'
-                : 'border-gray-300 dark:border-gray-700'
+                ? 'border-red-300 dark:border-red-700/50'
+                : 'border-gray-200 dark:border-white/10'
             )}
             placeholder="your@email.com"
           />
@@ -137,10 +137,10 @@ export function ContactForm() {
           type="text"
           {...register('subject')}
           className={cn(
-            'w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors',
+            'w-full px-4 py-3 rounded-lg border bg-white/40 dark:bg-white/5 backdrop-blur-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all shadow-sm',
             errors.subject
-              ? 'border-red-300 dark:border-red-700'
-              : 'border-gray-300 dark:border-gray-700'
+              ? 'border-red-300 dark:border-red-700/50'
+              : 'border-gray-200 dark:border-white/10'
           )}
           placeholder="What is this about?"
         />
@@ -159,10 +159,10 @@ export function ContactForm() {
           rows={5}
           {...register('message')}
           className={cn(
-            'w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none',
+            'w-full px-4 py-3 rounded-lg border bg-white/40 dark:bg-white/5 backdrop-blur-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all shadow-sm resize-none',
             errors.message
-              ? 'border-red-300 dark:border-red-700'
-              : 'border-gray-300 dark:border-gray-700'
+              ? 'border-red-300 dark:border-red-700/50'
+              : 'border-gray-200 dark:border-white/10'
           )}
           placeholder="Your message..."
         />
