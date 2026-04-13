@@ -100,12 +100,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
         </motion.div>
 
-        {/* Featured badge */}
-        {project.featured && (
-          <div className="absolute top-3 left-3 z-10">
-            <Badge variant="warning" size="sm">Featured</Badge>
-          </div>
-        )}
+
       </div>
 
       {/* Content */}
