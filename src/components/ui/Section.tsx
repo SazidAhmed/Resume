@@ -1,4 +1,7 @@
+'use client';
+
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 interface SectionProps {
   children: React.ReactNode;
@@ -10,7 +13,14 @@ interface SectionProps {
 
 export function Section({ children, id, title, subtitle, className }: SectionProps) {
   return (
-    <section id={id} className={cn('py-16 scroll-mt-20', className)}>
+    <motion.section 
+      id={id} 
+      className={cn('py-16 scroll-mt-20', className)}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+    >
       {(title || subtitle) && (
         <div className="mb-10">
           {title && (
@@ -41,6 +51,6 @@ export function Section({ children, id, title, subtitle, className }: SectionPro
         </div>
       )}
       {children}
-    </section>
+    </motion.section>
   );
 }

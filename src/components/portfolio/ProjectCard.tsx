@@ -16,10 +16,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      viewport={{ once: true }}
+      transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+      viewport={{ once: true, margin: "-50px" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="glass-card group relative overflow-hidden flex flex-col"

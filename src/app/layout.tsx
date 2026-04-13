@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Header, Footer, SideNav } from '@/components/layout';
+import { Plus_Jakarta_Sans } from 'next/font/google';
+import { FloatingDock, Footer } from '@/components/layout';
+import { CursorSpotlight, NoiseOverlay } from '@/components/ui';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import { profile } from '@/data/profile';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: `${profile.name} | ${profile.title}`,
@@ -24,12 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
-        <Header />
-        <SideNav />
-        <main className="pt-16">{children}</main>
-        <Footer />
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${plusJakartaSans.className} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NoiseOverlay />
+          <CursorSpotlight />
+          <FloatingDock />
+          <main className="pt-16 pb-32">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

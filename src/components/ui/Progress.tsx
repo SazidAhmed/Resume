@@ -54,8 +54,8 @@ export function Progress({
             style={{ background: gradients[color] }}
             initial={{ width: 0 }}
             whileInView={{ width: `${percentage}%` }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-            viewport={{ once: true }}
+            transition={{ type: 'spring', stiffness: 50, damping: 15, delay: 0.1 }}
+            viewport={{ once: true, margin: "-20px" }}
           />
         ) : (
           <div

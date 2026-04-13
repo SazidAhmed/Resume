@@ -7,3 +7,5 @@ export { Modal } from './Modal';
 export { Section } from './Section';
 export { Container } from './Container';
 export { PrintButton } from './PrintButton';
+export { CursorSpotlight } from './CursorSpotlight';
+export { NoiseOverlay } from './NoiseOverlay';
